@@ -1,0 +1,272 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  font-family: Inter, sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  flex-direction: column;
+}
+
+.features-section,
+.pricing-section {
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.features-header,
+.pricing-header {
+  z-index: 10;
+  margin-top: -12px;
+  width: 100%;
+}
+
+.features-content,
+.pricing-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.features-title,
+.pricing-title {
+  color: #191a15;
+  font: 600 50px Inter, sans-serif;
+}
+
+.features-description,
+.pricing-description {
+  color: #a6a6a6;
+  margin: 10px 0;
+  font: 500 18px/30px Inter, sans-serif;
+  max-width: 800px;
+}
+
+.cta-button {
+  border-radius: 70px;
+  border-color: #54bd95;
+  background-color: #54bd95;
+  color: #fff;
+  width: auto;
+  padding: 18px 31px;
+  margin-top: 30px;
+  font: 500 18px/2 Inter, sans-serif;
+  cursor: pointer;
+}
+
+.features-grid {
+  z-index: 10;
+  margin-top: 74px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.feature-card {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  font-family: Inter, sans-serif;
+  max-width: 300px;
+}
+
+.feature-image {
+  aspect-ratio: 0.85;
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.feature-title {
+  color: #191a15;
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 30px;
+  text-align: left;
+}
+
+.feature-description {
+  color: #a6a6a6;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+  text-align: left;
+}
+
+/* Pricing Section */
+.pricing-cards {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+  gap: 20px;
+}
+
+.pricing-card {
+  background-color: #f4f4f4;
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  border-radius: 10px;
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.pricing-card h3 {
+  font-size: 24px;
+  color: #333;
+}
+
+.pricing-card .price {
+  font-size: 36px;
+  color: #333;
+  margin: 10px 0;
+}
+
+.pricing-card .price span {
+  font-size: 16px;
+  color: #999;
+}
+
+.plan-description {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.pricing-button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.feature-comparison {
+  margin-top: 40px;
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.feature-comparison th,
+.feature-comparison td {
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+}
+
+.feature-comparison th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.feature-comparison td {
+  font-size: 16px;
+}
+
+@media (max-width: 991px) {
+  .container {
+    padding: 0 30px; /* Add padding for tablet */
+  }
+
+  .features-content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .features-title {
+    margin-top: 40px;
+    font-size: 40px;
+  }
+
+  .cta-button {
+    margin-top: 40px;
+    padding: 0 20px;
+  }
+
+  .features-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .feature-card {
+    margin-top: 40px;
+    max-width: 90%; /* Adjust feature card width for tablet */
+  }
+
+  .pricing-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .pricing-card {
+    width: 90%; /* Adjust pricing card width for tablet */
+    margin-bottom: 20px;
+  }
+
+  .feature-comparison {
+    font-size: 14px;
+  }
+}
+
+/* Mobile Breakpoint */
+@media (max-width: 767px) {
+  .container {
+    padding: 0 20px; /* Add padding for mobile to center content */
+  }
+
+  .features-title,
+  .pricing-title {
+    font-size: 32px;
+  }
+
+  .features-description,
+  .pricing-description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .cta-button {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+
+  .features-grid {
+    margin-top: 40px;
+  }
+
+  .pricing-card {
+    width: 95%; /* Wider pricing card on mobile */
+  }
+
+  .feature-comparison th,
+  .feature-comparison td {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
