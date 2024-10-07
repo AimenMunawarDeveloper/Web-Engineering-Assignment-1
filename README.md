@@ -18,4 +18,4 @@ Triathlon PK is a sports training facility located in Multan Cantt, specializing
 To run the website locally:
 1. Clone the repository:
    ```bash
-   git clone https://github.com/username/triathlon-pk.git
+   git clone https://github.com/AimenMunawarDeveloper/Web-Engineering-Assignment-1
