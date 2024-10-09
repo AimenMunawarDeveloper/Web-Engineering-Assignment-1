@@ -57,24 +57,25 @@ body {
   color: #a6a6a6;
   margin: 10px 0;
   font: 500 18px/30px Inter, sans-serif;
-  max-width: 800px;
+  max-width: 600px;
 }
 
 .cta-button {
-  border-radius: 70px;
-  border-color: #54bd95;
-  background-color: #54bd95;
-  color: #fff;
-  width: auto;
-  padding: 18px 31px;
-  margin-top: 30px;
-  font: 500 18px/2 Inter, sans-serif;
+  display: inline-block;
   cursor: pointer;
+  padding: 1em 2em;
+  margin-top: 2em;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 2em;
+  border: 0;
+  font-size: 1em;
   transition: transform 0.2s;
 }
 
 .cta-button:hover {
-  background-color: #268561;
+  background-color: #222222;
   transform: scale(1.05);
 }
 
@@ -115,11 +116,12 @@ body {
   font-weight: 600;
   margin-top: 30px;
   text-align: left;
+  margin-bottom: 8px;
 }
 
 .feature-description {
   color: #a6a6a6;
- font-size: 1em;
+  font-size: 1em;
   line-height: 1.3em;
   font-weight: 500;
   text-align: left;
@@ -211,7 +213,7 @@ body {
 
 @media (max-width: 991px) {
   .container {
-    padding: 0 30px; /* Add padding for tablet */
+    padding: 0 30px;
   }
 
   .features-content {
@@ -238,7 +240,7 @@ body {
 
   .feature-card {
     margin-top: 40px;
-    max-width: 90%; /* Adjust feature card width for tablet */
+    max-width: 90%;
   }
 
   .pricing-cards {
@@ -248,7 +250,7 @@ body {
   }
 
   .pricing-card {
-    width: 90%; /* Adjust pricing card width for tablet */
+    width: 90%;
     margin-bottom: 20px;
   }
 
@@ -257,10 +259,13 @@ body {
   }
 }
 
-/* Mobile Breakpoint */
 @media (max-width: 767px) {
   .container {
-    padding: 0 20px; /* Add padding for mobile to center content */
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center; 
   }
 
   .features-title,
@@ -272,19 +277,39 @@ body {
   .pricing-description {
     font-size: 16px;
     line-height: 24px;
+    text-align: center;
+    padding: 0 20px;
   }
 
   .cta-button {
     padding: 12px 24px;
     font-size: 16px;
+    max-width: 200px;
+    width: 100%;
+    margin: auto;
+    margin-top: 30px;
   }
 
   .features-grid {
     margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    width: 100%;
+  }
+
+  .feature-title,
+  .feature-description {
+    text-align: center;
+  }
+
+  .feature-image {
+    max-width: 80%;
+    margin: 0 auto; 
   }
 
   .pricing-card {
-    width: 95%; /* Wider pricing card on mobile */
+    width: 95%;
   }
 
   .feature-comparison th,
