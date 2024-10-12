@@ -159,7 +159,7 @@ body {
   align-items: center;
   text-align: center;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 70px;
 }
 .features-header,
 .pricing-header {
@@ -251,7 +251,7 @@ body {
 
 .feature-description {
   color: #a6a6a6;
-  font-size: 1em;
+  font-size: 1.3em;
   line-height: 1.3em;
   font-weight: 500;
   text-align: left;
