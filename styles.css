@@ -24,6 +24,8 @@ body {
 .page-container {
   margin: auto;
   width: 100%;
+  max-width: 100%; /* Prevent container from overflowing */
+  overflow: hidden;
 }
 .main {
   width: 100vw;
@@ -49,7 +51,7 @@ body {
   padding: 70px 0px 20px 0px;
 }
 /*nav bar*/
-.header{
+.header {
   width: 100%;
 }
 .navbar {
@@ -182,12 +184,12 @@ body {
 }
 @keyframes animation {
   from {
-      top: 0;
-      left: 0;
+    top: 0;
+    left: 0;
   }
   to {
-      top: 0;
-      left: calc(100% - 6rem);
+    top: 0;
+    left: calc(100% - 6rem);
   }
 }
 /* overlay*/
