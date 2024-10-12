@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
@@ -13,6 +13,7 @@ body {
   min-height: 100vh;
   background-color: #f4f4f4;
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 .container {
   display: flex;
@@ -24,9 +25,9 @@ body {
   flex-direction: column;
 }
 /*nav bar*/
-.header{
+.header {
   width: 100vw;
-  margin-bottom:  2em;
+  margin-bottom: 2em;
 }
 .navbar {
   width: 100%;
@@ -34,13 +35,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1.5em;
-  background-image: linear-gradient(
-    -45deg,
-    #54bd95,
-    #d2b48c,
-    #e6be8a,
-    #a6a6a6
-  );
+  background-image: linear-gradient(-45deg, #54bd95, #d2b48c, #e6be8a, #a6a6a6);
   box-shadow: 3px 3px 20px #d2b48c;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
@@ -90,13 +85,7 @@ body {
   position: absolute;
   top: 60px;
   right: 0;
-  background-image: linear-gradient(
-    -45deg,
-    #54bd95,
-    #d2b48c,
-    #e6be8a,
-    #a6a6a6
-  );
+  background-image: linear-gradient(-45deg, #54bd95, #d2b48c, #e6be8a, #a6a6a6);
   border-radius: 8px;
   box-shadow: 0px 5px 15px #0000001a;
   z-index: 9999;
@@ -325,13 +314,7 @@ body {
 /*footer*/
 .footer {
   width: 100%;
-  background-image: linear-gradient(
-    -45deg,
-    #54bd95,
-    #d2b48c,
-    #e6be8a,
-    #a6a6a6
-  );
+  background-image: linear-gradient(-45deg, #54bd95, #d2b48c, #e6be8a, #a6a6a6);
   position: relative;
   display: flex;
   align-items: center;
@@ -401,7 +384,7 @@ body {
   outline: none;
 }
 .footer__input::placeholder {
-  color:#191a15;
+  color: #191a15;
 }
 .footer svg {
   margin: 0.5rem;
@@ -511,8 +494,8 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    text-align: center; 
+    align-items: center;
+    text-align: center;
   }
 
   .features-title,
@@ -541,7 +524,7 @@ body {
     margin-top: 40px;
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
     width: 100%;
   }
 
@@ -552,7 +535,7 @@ body {
 
   .feature-image {
     max-width: 80%;
-    margin: 0 auto; 
+    margin: 0 auto;
   }
 
   .pricing-card {
