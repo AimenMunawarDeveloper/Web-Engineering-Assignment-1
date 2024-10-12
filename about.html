@@ -11,19 +11,57 @@
     <title>About</title>
   </head>
   <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="navbar__logo-container">
+          <img
+            src="./images/logot.png"
+            alt="Triathlon PK Logo"
+            class="navbar__logo"
+          />
+        </div>
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="./index.html" class="navigation__link">Home</a>
+          </li>
+          <li class="navigation__item">
+            <a href="./About.html" class="navigation__link">About Us</a>
+          </li>
+          <li class="navigation__item">
+            <a href="./services.html" class="navigation__link">Our Services</a>
+          </li>
+          <li class="navigation__item">
+            <a href="./Contact.html" class="navigation__link">Contact Us</a>
+          </li>
+        </ul>
+
+        <!-- Checkbox for toggle -->
+        <input type="checkbox" id="menuToggle" class="navbar__checkbox" />
+
+        <!-- Label for the checkbox to act as the toggle button -->
+        <label for="menuToggle" class="navbar__toggle">
+          <i class="fa fa-bars"></i>
+        </label>
+        <!-- Mobile menu -->
+        <ul class="mobile__menu">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./About.html">About Us</a></li>
+          <li><a href="./services.html">Our Services</a></li>
+          <li><a href="./Contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
     <div>
       <section class="section_1 container">
         <div class="anime">
           <i class="fa fa-bicycle" aria-hidden="true"></i>
         </div>
-
         <h1 class="motto">
           <i
             >Personal training for self confidence, health and self
             fulfilment</i
           >
         </h1>
-
         <h1>History</h1>
         <div class="history">
           <div class="history_right">
@@ -41,8 +79,7 @@
           <h1>Facilities</h1>
           <div class="card_section">
             <div class="card">
-              <img src="leg_press.jpg" alt="bench" />
-
+              <img src="./images/leg_press.jpg" alt="bench" />
               <h2>Well equipped</h2>
               <hr />
               <p>
@@ -51,8 +88,7 @@
               </p>
             </div>
             <div class="card">
-              <img src="yoga.jpg" alt="yoga" />
-
+              <img src="./images/yoga.jpg" alt="yoga" />
               <h2>Training Floor</h2>
               <hr />
               <p>
@@ -61,8 +97,7 @@
               </p>
             </div>
             <div class="card">
-              <img src="waiting.jpg" alt="wait" />
-
+              <img src="./images/waiting.jpg" alt="wait" />
               <h2>Waiting Area</h2>
               <hr />
               <p>Comfortable chairs and couches along with TV for parents.</p>
@@ -74,7 +109,7 @@
         <h1>Instructors</h1>
         <div class="Profiles">
           <div class="profile_card">
-            <img src="Jane.jpg" alt="profile 1" />
+            <img src="./images/Jane.jpg" alt="profile 1" />
             <div class="content">
               <h1>Jane Robinson</h1>
               <p>
@@ -84,7 +119,7 @@
             </div>
           </div>
           <div class="profile_card">
-            <img src="brett.jpg" alt="profile 2" />
+            <img src="./images/brett.jpg" alt="profile 2" />
             <div class="content">
               <h1>Brett Whitinui</h1>
               <p>
@@ -94,7 +129,7 @@
             </div>
           </div>
           <div class="profile_card">
-            <img src="wendyy.jpg" alt="profile 3" />
+            <img src="./images/wendyy.jpg" alt="profile 3" />
             <div class="content">
               <h1>Wendy Jones</h1>
               <p>
@@ -140,26 +175,24 @@
                   <h4 class="footer__navigation__title">Menu</h4>
                   <ul class="footer__list footer__navigation__list">
                     <li class="footer__navigation__item">
-                      <a
-                        href="/collections/all"
-                        class="footer__navigation__link"
-                        >Shop All</a
+                      <a href="./index.html" class="footer__navigation__link"
+                        >Home</a
                       >
                     </li>
                     <li class="footer__navigation__item">
-                      <a href="/pages/about-us" class="footer__navigation__link"
+                      <a href="./About.html" class="footer__navigation__link"
                         >About Us</a
                       >
                     </li>
                     <li class="footer__navigation__item">
-                      <a
-                        href="/blogs/community"
-                        class="footer__navigation__link"
-                        >Community</a
+                      <a href="./services.html" class="footer__navigation__link"
+                        >Our Services</a
                       >
                     </li>
                     <li class="footer__navigation__item">
-                      <a href="#" class="footer__navigation__link">Vibes</a>
+                      <a href="./Contact.html" class="footer__navigation__link"
+                        >Contact Us</a
+                      >
                     </li>
                   </ul>
                 </nav>
@@ -169,41 +202,23 @@
                   <h4 class="footer__navigation__title">Support</h4>
                   <ul class="footer__list footer__navigation__list">
                     <li class="footer__navigation__item">
-                      <a
-                        href="/pages/shipping-returns"
-                        class="footer__navigation__link"
-                        >Shipping &amp; Returns</a
-                      >
-                    </li>
-                    <li class="footer__navigation__item">
-                      <a href="/pages/help" class="footer__navigation__link"
+                      <a href="#" class="footer__navigation__link"
                         >Help &amp; FAQ</a
                       >
                     </li>
 
                     <li class="footer__navigation__item">
-                      <a
-                        href="/pages/terms-conditions"
-                        class="footer__navigation__link"
+                      <a href="#" class="footer__navigation__link"
                         >Terms &amp; Conditions</a
                       >
                     </li>
                     <li class="footer__navigation__item">
-                      <a
-                        href="/pages/privacy-policy"
-                        class="footer__navigation__link"
+                      <a href="#" class="footer__navigation__link"
                         >Privacy Policy</a
                       >
                     </li>
                     <li class="footer__navigation__item">
-                      <a href="/pages/contact" class="footer__navigation__link"
-                        >Contact</a
-                      >
-                    </li>
-                    <li class="footer__navigation__item">
-                      <a href="/account/login" class="footer__navigation__link">
-                        Login
-                      </a>
+                      <a href="#" class="footer__navigation__link"> Login </a>
                     </li>
                   </ul>
                 </nav>
