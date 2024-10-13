@@ -28,7 +28,7 @@ body {
 .header {
   width: 100vw;
   margin-bottom: 5em;
-  margin-left: 14px;
+  overflow-x: hidden;
 }
 .navbar {
   width: 100%;
@@ -142,12 +142,12 @@ body {
 }
 @keyframes animation {
   from {
-      top: 0;
-      left: 0;
+    top: 0;
+    left: 0;
   }
   to {
-      top: 0;
-      left: calc(100% - 6rem);
+    top: 0;
+    left: calc(100% - 6rem);
   }
 }
 /*Features and pricing section*/
