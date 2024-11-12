@@ -61,7 +61,10 @@ body {
 .hide{
   display: none;
 }
-
+.style__btns{
+  display: flex;
+  gap:1rem;
+}
 /*nav bar*/
 .header {
   width: 100%;
