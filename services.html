@@ -9,7 +9,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="services.css" />
-    <link rel="icon" type="image/x-icon" href="/images/icon.png">
+    <link rel="icon" type="image/x-icon" href="/images/icon.png" />
   </head>
   <body>
     <header class="header">
@@ -56,7 +56,7 @@
         <i class="fa fa-bicycle" aria-hidden="true"></i>
       </div> -->
     </header>
-    
+
     <div class="container">
       <!-- Features Section -->
       <section class="features-section">
@@ -65,8 +65,7 @@
             <h2 class="features-title">Services We Offer</h2>
             <p class="features-description">
               At Triathlon PK, we specialize in building your confidence,
-              health, and self-fulfillment through a wide range of
-              services.
+              health, and self-fulfillment through a wide range of services.
             </p>
             <button class="cta-button">Get Started</button>
           </div>
@@ -110,8 +109,8 @@
             />
             <h3 class="feature-title">Endless Pool</h3>
             <p class="feature-description">
-              Train like a pro with our endless pool designed for low-impact, high-intensity swimming workouts.
-            </p>
+              Train like a pro with our endless pool designed for low-impact,
+              high-intensity swimming workouts.
             </p>
           </article>
         </div>
@@ -125,11 +124,12 @@
             <p class="pricing-description">
               Choose the right plan for your training needs
             </p>
+            <button id="addItemBtn" class="cta-button">Add Item</button>
           </div>
         </header>
 
         <!-- Pricing Cards -->
-        <div class="pricing-cards">
+        <div class="pricing-cards" id="pricingCardsContainer">
           <div class="pricing-card">
             <h3>Personal Training</h3>
             <p class="price">$30 <span>per hour</span></p>
@@ -149,6 +149,48 @@
             <p class="price">$15 <span>per session</span></p>
             <p class="plan-description">Relax with full yoga equipment</p>
             <button class="pricing-button">Join a Session</button>
+          </div>
+        </div>
+
+        <div id="addPlanModal" class="modal">
+          <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <h2>Add a New Pricing Plan</h2>
+            <form id="addPlanForm">
+              <label for="planName">Plan Name:</label>
+              <input
+                type="text"
+                id="planName"
+                placeholder="Enter plan name"
+                required
+              />
+
+              <label for="planPrice">Price ($):</label>
+              <input
+                type="number"
+                id="planPrice"
+                placeholder="Enter price"
+                required
+              />
+
+              <label for="planRate">Rate:</label>
+              <input
+                type="text"
+                id="planRate"
+                placeholder="e.g., per session"
+                required
+              />
+
+              <label for="planDescription">Description:</label>
+              <textarea
+                id="planDescription"
+                placeholder="Provide a brief description"
+                rows="4"
+                required
+              ></textarea>
+
+              <button type="submit">Add Plan</button>
+            </form>
           </div>
         </div>
 
@@ -360,9 +402,9 @@
               <ul class="footer__list footer__icons__list">
                 <li>
                   <a
-                  href="https://www.facebook.com/facebookBrasil"
-                  target="_blank"
-                >
+                    href="https://www.facebook.com/facebookBrasil"
+                    target="_blank"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
@@ -393,9 +435,9 @@
                 </li>
                 <li>
                   <a
-                      href="https://www.instagram.com/instagram/"
-                      target="_blank"
-                    >
+                    href="https://www.instagram.com/instagram/"
+                    target="_blank"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
@@ -418,5 +460,6 @@
         </div>
       </div>
     </footer>
+    <script src="services.js"></script>
   </body>
 </html>

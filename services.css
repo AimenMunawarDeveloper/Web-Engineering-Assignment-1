@@ -258,11 +258,117 @@ body {
 }
 
 /* Pricing Section */
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.6
+  ); /* Slightly darker background for contrast */
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: linear-gradient(
+    135deg,
+    #e6be8a,
+    #54bd95
+  ); /* Matches the navbar gradient */
+  padding: 30px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.3s ease-in-out;
+  text-align: center;
+}
+
+.modal-content h2 {
+  font-size: 2rem;
+  color: #191a15;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.modal-content label {
+  font-size: 1.1rem;
+  color: #191a15;
+  margin-bottom: 5px;
+  display: block;
+  text-align: left;
+}
+
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.modal-content input:focus,
+.modal-content textarea:focus {
+  outline: none;
+  border-color: #54bd95; /* Accent color */
+}
+
+.modal-content button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modal-content button:hover {
+  background-color: #222;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #191a15;
+}
+
+.close-btn:hover {
+  color: #ff6b6b; /* Light red for hover effect */
+}
+
+/* Add a subtle fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 .pricing-cards {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 80px;
+  margin-top: 60px;
 }
 
 .pricing-card {
