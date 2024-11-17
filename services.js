@@ -3,12 +3,15 @@
 ********************************************************* */
 // Modal and Form Elements
 const addItemBtn = document.getElementById("addItemBtn");
+const removeItemBtn = document.getElementById("removeItemBtn");
+const getStartedBtn = document.querySelector(".getStartedBtn");
+
 const addPlanModal = document.getElementById("addPlanModal");
 const closeModal = document.getElementById("closeModal");
+
 const addPlanForm = document.getElementById("addPlanForm");
 const pricingCardsContainer = document.getElementById("pricingCardsContainer");
 const pricingSection = document.querySelector(".pricing-section");
-const getStartedBtn = document.querySelector(".cta-button");
 
 getStartedBtn.addEventListener("click", () => {
   pricingSection.scrollIntoView({ behavior: "smooth" });
@@ -50,4 +53,13 @@ addPlanForm.addEventListener("submit", (e) => {
   // Clear the form and close the modal
   addPlanForm.reset();
   addPlanModal.style.display = "none";
+});
+removeItemBtn.addEventListener("click", () => {
+  const pricingCardsContainer = document.getElementById(
+    "pricingCardsContainer"
+  );
+  let lastCard = pricingCardsContainer.lastElementChild;
+  if (lastCard) {
+    pricingCardsContainer.removeChild(lastCard);
+  }
 });
