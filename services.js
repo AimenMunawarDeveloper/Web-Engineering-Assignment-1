@@ -1,9 +1,18 @@
+/********************************************************* 
+      Task 2: DOM Manipulation
+********************************************************* */
 // Modal and Form Elements
 const addItemBtn = document.getElementById("addItemBtn");
 const addPlanModal = document.getElementById("addPlanModal");
 const closeModal = document.getElementById("closeModal");
 const addPlanForm = document.getElementById("addPlanForm");
 const pricingCardsContainer = document.getElementById("pricingCardsContainer");
+const pricingSection = document.querySelector(".pricing-section");
+const getStartedBtn = document.querySelector(".cta-button");
+
+getStartedBtn.addEventListener("click", () => {
+  pricingSection.scrollIntoView({ behavior: "smooth" });
+});
 
 // Open Modal
 addItemBtn.addEventListener("click", () => {

@@ -3,10 +3,17 @@ const hideDetailsBtns = document.querySelectorAll(".btn__hide");
 const changeBackgroundBtn = document.querySelector(".btn__bg");
 const changeTextStyleBtn = document.querySelector(".btn__txt__style");
 const resetTextStyleBtn = document.querySelector(".btn__reset__txt__style");
+const learnMoreBtn = document.querySelector(".btn__learn__more");
+const introSection = document.querySelector(".section__intro");
 
 const fontStyleArray = ["normal", "italic", "oblique"];
 const fontWeightArray = ["normal", "lighter", "bold", "bolder"];
 const previousStyle = new Map();
+
+/*Smooth scrolling */
+learnMoreBtn.addEventListener("click", () => {
+  introSection.scrollIntoView({ behavior: "smooth" });
+});
 
 /********************************************************* 
       Task 1: JavaScript Functions and Event Handling

@@ -229,6 +229,10 @@ hr{
     font-size: 1.3rem;
     font-weight: bold;
     color: var(--grey);
+    display: block;
+    margin: 10px;
+    
+  
 }
 input{
     width: 100%;
@@ -254,6 +258,26 @@ H1{
     text-align: center;
     
 }
+#name{
+  color: red;
+  font-size: 1rem;
+  padding: 5px 0;
+}
+#phone{
+  color: red;
+  font-size: 1rem;
+  padding: 5px 0;
+}
+
+.Trainers{
+  padding: 5px;
+  font-size: 1em;
+  color: var(--grey);
+  margin: 10px 0;
+  width: 100%;
+  
+}
+
 .submit{
     padding: 1em 2em;
     margin-top: 2em;
