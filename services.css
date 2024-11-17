@@ -291,6 +291,7 @@ body {
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
   animation: fadeIn 0.3s ease-in-out;
   text-align: center;
+  position: relative;
 }
 
 .modal-content h2 {
@@ -324,6 +325,14 @@ body {
   border-color: #54bd95; /* Accent color */
 }
 
+.modal-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
 .modal-content button {
   background-color: #333;
   color: #fff;
@@ -340,16 +349,13 @@ body {
 }
 
 .close-btn {
-  position: absolute;
-  top: 15px;
-  right: 20px;
   font-size: 24px;
   cursor: pointer;
   color: #191a15;
 }
 
 .close-btn:hover {
-  color: #ff6b6b; /* Light red for hover effect */
+  color: #ff6b6b;
 }
 
 /* Add a subtle fade-in animation */
@@ -566,6 +572,19 @@ body {
   }
   .mobile__menu.active {
     display: block;
+  }
+  .pricing-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 50px;
+  }
+
+  .pricing-card {
+    width: 90%; /* Make the cards occupy most of the screen width */
+    max-width: 400px; /* Prevent cards from getting too wide on larger phones */
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1); /* Reduce shadow for mobile */
   }
 }
 @media (min-width: 768px) {
