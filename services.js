@@ -12,22 +12,20 @@ const closeModal = document.getElementById("closeModal");
 const addPlanForm = document.getElementById("addPlanForm");
 const pricingCardsContainer = document.getElementById("pricingCardsContainer");
 const pricingSection = document.querySelector(".pricing-section");
+const featureImages = document.querySelectorAll(".feature-image");
 
 getStartedBtn.addEventListener("click", () => {
   pricingSection.scrollIntoView({ behavior: "smooth" });
 });
 
-// Open Modal
 addItemBtn.addEventListener("click", () => {
   addPlanModal.style.display = "flex";
 });
 
-// Close Modal
 closeModal.addEventListener("click", () => {
   addPlanModal.style.display = "none";
 });
 
-// Add New Plan
 addPlanForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -47,10 +45,8 @@ addPlanForm.addEventListener("submit", (e) => {
   <button class="pricing-button">Get Started</button>
 `;
 
-  // Append the new card
   pricingCardsContainer.appendChild(newCard);
 
-  // Clear the form and close the modal
   addPlanForm.reset();
   addPlanModal.style.display = "none";
 });
@@ -62,4 +58,17 @@ removeItemBtn.addEventListener("click", () => {
   if (lastCard) {
     pricingCardsContainer.removeChild(lastCard);
   }
+});
+featureImages.forEach((image) => {
+  const originalSrc = image.getAttribute("data-original");
+  const hoverSrc = image.getAttribute("data-hover");
+
+  // Change the image source on hover
+  image.addEventListener("mouseover", () => {
+    image.src = hoverSrc;
+  });
+
+  image.addEventListener("mouseout", () => {
+    image.src = originalSrc;
+  });
 });
