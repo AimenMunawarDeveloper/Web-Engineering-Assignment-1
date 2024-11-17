@@ -1,7 +1,6 @@
 /********************************************************* 
       Task 2: DOM Manipulation
 ********************************************************* */
-// Modal and Form Elements
 const addItemBtn = document.getElementById("addItemBtn");
 const removeItemBtn = document.getElementById("removeItemBtn");
 const getStartedBtn = document.querySelector(".getStartedBtn");
@@ -14,18 +13,18 @@ const pricingCardsContainer = document.getElementById("pricingCardsContainer");
 const pricingSection = document.querySelector(".pricing-section");
 const featureImages = document.querySelectorAll(".feature-image");
 
+// smooth scrolling
 getStartedBtn.addEventListener("click", () => {
   pricingSection.scrollIntoView({ behavior: "smooth" });
 });
-
+// clicking on addItem button displays the modal window
 addItemBtn.addEventListener("click", () => {
   addPlanModal.style.display = "flex";
 });
-
+// clicking on closeModal button hides the modal window
 closeModal.addEventListener("click", () => {
   addPlanModal.style.display = "none";
 });
-
 addPlanForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -47,6 +46,7 @@ addPlanForm.addEventListener("submit", (e) => {
 
   pricingCardsContainer.appendChild(newCard);
 
+  // resetting the values and hiding the form modal
   addPlanForm.reset();
   addPlanModal.style.display = "none";
 });
@@ -59,6 +59,9 @@ removeItemBtn.addEventListener("click", () => {
     pricingCardsContainer.removeChild(lastCard);
   }
 });
+/********************************************************* 
+      Task 5:  Image Rollover Animation
+********************************************************* */
 featureImages.forEach((image) => {
   const originalSrc = image.getAttribute("data-original");
   const hoverSrc = image.getAttribute("data-hover");
@@ -67,7 +70,7 @@ featureImages.forEach((image) => {
   image.addEventListener("mouseover", () => {
     image.src = hoverSrc;
   });
-
+  // Reverting image back to original state when mouse moves away
   image.addEventListener("mouseout", () => {
     image.src = originalSrc;
   });

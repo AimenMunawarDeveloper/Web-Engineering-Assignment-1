@@ -1,13 +1,29 @@
 const showDetailsBtns = document.querySelectorAll(".btn__show");
 const hideDetailsBtns = document.querySelectorAll(".btn__hide");
+
 const changeBackgroundBtn = document.querySelector(".btn__bg");
 const changeTextStyleBtn = document.querySelector(".btn__txt__style");
 const resetTextStyleBtn = document.querySelector(".btn__reset__txt__style");
 const learnMoreBtn = document.querySelector(".btn__learn__more");
+
 const introSection = document.querySelector(".section__intro");
 
 const fontStyleArray = ["normal", "italic", "oblique"];
-const fontWeightArray = ["normal", "lighter", "bold", "bolder"];
+const fontWeightArray = [
+  "normal",
+  "lighter",
+  "bold",
+  "bolder",
+  "100",
+  "200",
+  "300",
+  "400",
+  "500",
+  "600",
+  "700",
+  "800",
+  "900",
+];
 const previousStyle = new Map();
 
 /*Smooth scrolling */
@@ -18,9 +34,10 @@ learnMoreBtn.addEventListener("click", () => {
 /********************************************************* 
       Task 1: JavaScript Functions and Event Handling
 ********************************************************* */
-// implementing the show and hide buttons functionality
+// implementing the show and hide detail buttons functionality
 const changingCardTextVisibility = function (e, classToAdd, classToRemove) {
   e.preventDefault();
+  // finding the parent element of the button that is clicked
   const btnParent = e.target.parentElement;
   let cardText = null;
 
@@ -29,8 +46,10 @@ const changingCardTextVisibility = function (e, classToAdd, classToRemove) {
       (sibling) => sibling.tagName === "P"
     ); // converting childen node list to array and finding the "p" element in it
   }
-  cardText.classList.remove(`${classToRemove}`);
-  cardText.classList.add(`${classToAdd}`);
+  if (cardText) {
+    cardText.classList.remove(`${classToRemove}`);
+    cardText.classList.add(`${classToAdd}`);
+  }
 };
 showDetailsBtns.forEach((showBtn) => {
   showBtn.addEventListener("click", (e) => {
@@ -48,7 +67,7 @@ const generateRandomColor = () => {
 };
 // implementing changing background color functionality
 changeBackgroundBtn.addEventListener("click", (e) => {
-  console.log(e.target);
+  // console.log(e.target);
   const requiredSection = e.target.closest("section");
   requiredSection.style.backgroundColor = `#${generateRandomColor()}`;
 });
@@ -56,8 +75,11 @@ changeBackgroundBtn.addEventListener("click", (e) => {
 /********************************************************* 
                 Task 3: Dynamic Styling
 ********************************************************* */
+const getRandomElementFromArray = (arr) =>
+  arr[Math.floor(Math.random() * arr.length)];
+
 const changeTextStyle = (e) => {
-  console.log(e.target);
+  // console.log(e.target);
   const requiredSection = e.target.closest("section");
 
   // saving the text style of section in the map before modifying it
@@ -69,11 +91,9 @@ const changeTextStyle = (e) => {
     });
   }
   // generating and setting random font style,text color,font weight
-  requiredSection.style.fontStyle =
-    fontStyleArray[Math.floor(Math.random() * fontStyleArray.length)];
+  requiredSection.style.fontStyle = getRandomElementFromArray(fontStyleArray);
   requiredSection.style.color = `#${generateRandomColor()}`;
-  requiredSection.style.fontWeight =
-    fontWeightArray[Math.floor(Math.random() * fontWeightArray.length)];
+  requiredSection.style.fontWeight = getRandomElementFromArray(fontWeightArray);
 };
 const resetTextStyle = (e) => {
   const requiredSection = e.target.closest("section");

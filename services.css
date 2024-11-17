@@ -151,6 +151,12 @@ body {
   }
 }
 /*Features and pricing section*/
+.changePricingListBtns{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap:1em;
+}
 .features-section,
 .pricing-section {
   border-radius: 0;
