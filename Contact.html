@@ -53,7 +53,7 @@
             <i class="fa fa-bicycle" aria-hidden="true"></i>
         </div>
         <div class="container">
-            </form>
+            
             <h1>Follow Us</h1>
             <div class="following">
                 <div class="card side">
@@ -80,41 +80,37 @@
         <H1>Contact Us</H1>
         <div class="contact">
             <div class="contact_left">
-                <form>
-                    <div class="form">
+                <form method="GET" action="" class="form">
                         <p id="name"></p>
                         <div class="content">
-                            <label>Name:</label>
-                            <input type="text" placeholder="Enter your name" required focus />
+                            <label for="name">Name:</label>
+                            <input type="text" placeholder="Enter your name" name="name" autofocus />
                             <hr />
                         </div>
                         <div class="content">
                             <p id="phone"></p>
-                            <label>Phone Number:</label>
-                            <input type="tel" placeholder="XXX-XXX-XXXX" required />
+                            <label for="phone">Phone Number:</label>
+                            <input type="text" placeholder="XXX-XXX-XXXX" name="phone" />
                             <hr />
-
-                            <label>Email:</label>
-                            <input type="email" placeholder="Enter your email" required />
+                            <p id="email"></p>
+                            <label for="email">Email:</label>
+                            <input type="text" placeholder="Enter your email" name="email" />
                             <hr />
                             <label for="trainer">Trainers:</label>
                             <select name="trainer" class="Trainers">
-
                                 <option value="Jane Robinson">Jane Robinson</option>
                                 <option value="Brett Whitinui">Brett Whitinui</option>
                                 <option value="Wendy Jones">Wendy Jones</option>
                             </select>
                         </div>
                         <div class="content">
-                            <label>Message:</label>
+                            <label for="message">Message:</label>
                             <br /><br />
-                            <textarea placeholder="Enter your message..." required></textarea>
+                            <textarea name="message" placeholder="Enter your message..." ></textarea>
                         </div>
                         <div class="button_for_submit">
                             <button class="submit" type="submit">Submit</button>
                         </div>
-                    </div>
-                         
                 </form>
             </div>
             <div class="contact_right">
